@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4" >
+    <div class="col-md-4 mb-3" *ngFor="let anime of animeResult | paginate:{itemsPerPage: tableSize,currentPage:page,totalItems:count}; let i = index">
+      <br>
+      <div class="card h-100">
+        <img [src]="anime.images['jpg'].image_url" alt="" alt="100%x280" class="card-img img-fluid">
+        <div class="text-card">
+          <h5 class="card-title"><strong>{{anime.title}}</strong></h5>
+          <p class="card-text" id="score" name="score">{{anime.score}}</p>
+          <p class="card-text">{{anime.synopsis}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-12">
+        <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)"></pagination-controls>
+    </div>
+  </div>
+</div>
+

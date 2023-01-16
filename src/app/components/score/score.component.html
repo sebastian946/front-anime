@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-8">
+      <div class="mb-3 row">
+        <input type="text" [(ngModel)]="search" name="search" id="search" placeholder="Search anime"
+          class="form-control form-control-lg" aria-label="Search" required>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="mb-3 row">
+        <button class="btn btn-primary" type="button" (click)="searchNameAnime()">Search</button>
+      </div>
+    </div>
+    <br>
+    <h3>The average the anime : {{search}} is {{averange}}</h3>
+
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let item of length; let i = index">
+        <div class="card">
+          <img class="img-fluid" alt="100%x280" [src]="resultImage[i+1]">
+          <div class="card-body">
+            <h4 class="card-title">{{resultTitle[i+1]}}</h4>
+            <p class="card-text">{{resultMessage[i+1]}}</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-4" *ngFor="let item of length; let i = index">
+      <div class="card" style="width: 18rem;">
+        <img [src]="resultImage[i+1]" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">{{resultTitle[i+1]}}</p>
+          <p class="card-text">{{resultMessage[i+1]}}</p>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
