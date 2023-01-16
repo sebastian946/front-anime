@@ -5,13 +5,17 @@ button{
 pagination-controls{
   padding: 20px;
 }
+.card{
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px #bebebe;
+}
 .col{
   margin-bottom: 10px;
 }
 .text-card{
   background-color: transparent;
   position: absolute;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
   bottom: 0;
   z-index: 1;
