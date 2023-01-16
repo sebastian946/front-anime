@@ -33,6 +33,7 @@ pagination-controls{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
+  border-radius: 15px;
 }
 
 .card:hover .text-card{
@@ -43,6 +44,7 @@ pagination-controls{
 	-ms-transform: translate(0px, 0px);
 	opacity: 1;
   background-color: white;
+  border-radius: 15px;
 
 }
 
